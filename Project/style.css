@@ -1,0 +1,738 @@
+/* ==========================================
+   DEVDESK OS
+   STYLE.CSS - PART 1
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef2f7;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    width:260px;
+    background:#111827;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    padding:25px 20px;
+    overflow-y:auto;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo i{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    font-size:28px;
+    font-weight:700;
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+
+    margin:15px 0;
+    padding:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.sidebar ul li:hover{
+
+    background:#2563eb;
+
+    transform:translateX(6px);
+
+}
+
+.sidebar ul li i{
+
+    margin-right:12px;
+
+    width:20px;
+
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:35px;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:38px;
+
+    color:#1e293b;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+#clock{
+
+    background:white;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.content{
+
+    display:none;
+
+    animation:fade .5s;
+
+}
+
+.content.active{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:45px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+}
+
+/* ===========================
+   WELCOME BOX
+=========================== */
+
+.welcome-box{
+
+    margin-top:40px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.welcome-box h2{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.welcome-box p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+/* ==========================================
+   STYLE.CSS - PART 2
+==========================================*/
+
+/* ===========================
+   PROFILE
+=========================== */
+
+.profile-container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+    flex-wrap:wrap;
+}
+
+.profile-image img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #2563eb;
+}
+
+.profile-details{
+    flex:1;
+}
+
+.profile-details h2{
+    font-size:32px;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.profile-details p{
+    margin-bottom:20px;
+    color:#555;
+}
+
+.profile-details table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.profile-details table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+/* ===========================
+   RESUME
+=========================== */
+
+.resume-box{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.resume-box h3{
+    margin-top:20px;
+    color:#2563eb;
+}
+
+.resume-box ul{
+    margin-left:20px;
+    margin-top:15px;
+}
+
+.resume-box li{
+    margin:10px 0;
+}
+
+.resume-box button{
+    margin-top:25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.resume-box button:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card i{
+    font-size:50px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.project-card button{
+    margin-top:20px;
+    padding:10px 22px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skill{
+    margin:25px 0;
+}
+
+.skill label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.progress{
+    width:100%;
+    background:#ddd;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    color:white;
+    padding:10px;
+    text-align:right;
+    font-weight:bold;
+}
+
+.html{
+    width:95%;
+    background:#e44d26;
+}
+
+.css{
+    width:90%;
+    background:#264de4;
+}
+
+.js{
+    width:85%;
+    background:#f7df1e;
+    color:black;
+}
+
+.python{
+    width:80%;
+    background:#3776ab;
+}
+
+.sql{
+    width:75%;
+    background:#16a34a;
+}
+/* ==========================================
+   STYLE.CSS - PART 3
+==========================================*/
+
+/* ===========================
+   NOTES
+=========================== */
+
+#noteText{
+    width:100%;
+    height:250px;
+    padding:20px;
+    border:none;
+    outline:none;
+    resize:none;
+    border-radius:15px;
+    font-size:16px;
+    background:#fff;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+button{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+
+/* ===========================
+   CALCULATOR
+=========================== */
+
+.calculator{
+    max-width:380px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+#display{
+    width:100%;
+    height:60px;
+    border:none;
+    background:#f1f5f9;
+    border-radius:10px;
+    text-align:right;
+    font-size:28px;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.calc-buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.calc-buttons button{
+    height:60px;
+    font-size:20px;
+}
+
+/* ===========================
+   PLANNER
+=========================== */
+
+#taskInput,
+#city{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+#taskList{
+    list-style:none;
+    margin-top:20px;
+}
+
+#taskList li{
+    background:#fff;
+    padding:15px;
+    margin-bottom:12px;
+    border-radius:10px;
+    box-shadow:0 8px 15px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   WEATHER
+=========================== */
+
+#weatherResult{
+    margin-top:25px;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    min-height:120px;
+}
+
+/* ===========================
+   SETTINGS
+=========================== */
+
+.settings-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.setting-card{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.setting-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    background:#111827;
+    color:#fff;
+    padding:20px;
+    border-radius:12px;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ddd;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:991px){
+
+    .sidebar{
+        width:80px;
+        padding:20px 10px;
+    }
+
+    .sidebar h2{
+        display:none;
+    }
+
+    .sidebar li{
+        text-align:center;
+        font-size:0;
+    }
+
+    .sidebar li i{
+        font-size:22px;
+        margin:0;
+    }
+
+    .main-content{
+        margin-left:80px;
+        width:calc(100% - 80px);
+    }
+
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .profile-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile-image img{
+        width:180px;
+        height:180px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .main-content{
+        padding:15px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .calculator{
+        width:100%;
+    }
+
+}
+
+/* ==========================================
+   END OF STYLE.CSS
+==========================================*/

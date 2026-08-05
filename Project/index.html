@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevDesk OS | Developer Portfolio Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>DevDesk OS</h2>
+        </div>
+
+        <ul>
+
+            <li onclick="showSection('dashboard')">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="showSection('profile')">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </li>
+
+            <li onclick="showSection('resume')">
+                <i class="fa-solid fa-file"></i>
+                Resume
+            </li>
+
+            <li onclick="showSection('projects')">
+                <i class="fa-solid fa-code"></i>
+                Projects
+            </li>
+
+            <li onclick="showSection('skills')">
+                <i class="fa-solid fa-chart-simple"></i>
+                Skills
+            </li>
+
+            <li onclick="showSection('notes')">
+                <i class="fa-solid fa-note-sticky"></i>
+                Notes
+            </li>
+
+            <li onclick="showSection('calculator')">
+                <i class="fa-solid fa-calculator"></i>
+                Calculator
+            </li>
+
+            <li onclick="showSection('planner')">
+                <i class="fa-solid fa-calendar-days"></i>
+                Planner
+            </li>
+
+            <li onclick="showSection('weather')">
+                <i class="fa-solid fa-cloud-sun"></i>
+                Weather
+            </li>
+
+            <li onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i>
+                Dark Mode
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>Developer Portfolio Dashboard</h1>
+
+            <div class="header-right">
+
+                <div id="clock">
+                    00:00:00
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ========================= -->
+        <!-- DASHBOARD -->
+        <!-- ========================= -->
+
+        <section id="dashboard" class="content active">
+
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>Total Projects</h3>
+
+                    <p id="projectCount">12</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <h3>Technologies</h3>
+
+                    <p>HTML CSS JS</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-award"></i>
+
+                    <h3>Certificates</h3>
+
+                    <p>8</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <h3>Experience</h3>
+
+                    <p>Fresher</p>
+                </div>
+
+            </div>
+
+            <div class="welcome-box">
+
+                <h2>
+                    Welcome to DevDesk OS
+                </h2>
+
+                <p>
+
+                    This dashboard is developed completely using
+                    HTML,
+                    CSS,
+                    and JavaScript.
+
+                    It demonstrates responsive design,
+                    DOM manipulation,
+                    Local Storage,
+                    animations,
+                    and interactive UI components.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- PROFILE -->
+        <!-- ========================= -->
+
+        <section id="profile" class="content">
+
+            <h2>My Profile</h2>
+
+            <div class="profile-container">
+
+                <div class="profile-image">
+
+                    <img src="https://via.placeholder.com/200"
+                        alt="Profile">
+
+                </div>
+
+                <div class="profile-details">
+
+                    <h2>Your Name</h2>
+
+                    <p>
+                        Final Year AIML Student
+                    </p>
+
+                    <table>
+
+                        <tr>
+
+                            <td>Name</td>
+
+                            <td>Your Name</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Department</td>
+
+                            <td>AIML</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>College</td>
+
+                            <td>Your College</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Email</td>
+
+                            <td>yourmail@gmail.com</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Phone</td>
+
+                            <td>9876543210</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Location</td>
+
+                            <td>Chennai</td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- RESUME -->
+        <!-- ========================= -->
+
+        <section id="resume" class="content">
+
+            <h2>Resume</h2>
+
+            <div class="resume-box">
+
+                <h3>Your Name</h3>
+
+                <h4>Frontend Developer</h4>
+
+                <hr>
+
+                <h3>Education</h3>
+
+                <p>
+                    B.Tech Artificial Intelligence and Machine Learning
+                </p>
+
+                <h3>Skills</h3>
+
+                <ul>
+
+                    <li>HTML5</li>
+
+                    <li>CSS3</li>
+
+                    <li>JavaScript</li>
+
+                    <li>Python</li>
+
+                    <li>SQL</li>
+
+                </ul>
+
+                <button onclick="window.print()">
+                    Download Resume
+                </button>
+
+            </div>
+
+        </section>
+                <!-- ========================= -->
+        <!-- PROJECTS -->
+        <!-- ========================= -->
+
+        <section id="projects" class="content">
+
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Developer Portfolio</h3>
+                    <p>Responsive portfolio website using HTML, CSS and JavaScript.</p>
+                    <button>View Project</button>
+                </div>
+
+                <div class="project-card">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h3>E-Commerce UI</h3>
+                    <p>Modern shopping website interface with animations.</p>
+                    <button>View Project</button>
+                </div>
+
+                <div class="project-card">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <h3>Weather App</h3>
+                    <p>Weather application using OpenWeather API.</p>
+                    <button>View Project</button>
+                </div>
+
+                <div class="project-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Task Manager</h3>
+                    <p>To-Do application with Local Storage.</p>
+                    <button>View Project</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- SKILLS -->
+        <!-- ========================= -->
+
+        <section id="skills" class="content">
+
+            <h2>Skills</h2>
+
+            <div class="skill">
+
+                <label>HTML</label>
+
+                <div class="progress">
+                    <div class="progress-bar html">95%</div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <label>CSS</label>
+
+                <div class="progress">
+                    <div class="progress-bar css">90%</div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <label>JavaScript</label>
+
+                <div class="progress">
+                    <div class="progress-bar js">85%</div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <label>Python</label>
+
+                <div class="progress">
+                    <div class="progress-bar python">80%</div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <label>SQL</label>
+
+                <div class="progress">
+                    <div class="progress-bar sql">75%</div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- NOTES -->
+        <!-- ========================= -->
+
+        <section id="notes" class="content">
+
+            <h2>Notes</h2>
+
+            <textarea
+                id="noteText"
+                placeholder="Write your notes here...">
+            </textarea>
+
+            <br><br>
+
+            <button onclick="saveNote()">
+                Save Note
+            </button>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- CALCULATOR -->
+        <!-- ========================= -->
+
+        <section id="calculator" class="content">
+
+            <h2>Calculator</h2>
+
+            <div class="calculator">
+
+                <input
+                    type="text"
+                    id="display"
+                    readonly>
+
+                <div class="calc-buttons">
+
+                    <button onclick="addValue('7')">7</button>
+                    <button onclick="addValue('8')">8</button>
+                    <button onclick="addValue('9')">9</button>
+                    <button onclick="addValue('/')">/</button>
+
+                    <button onclick="addValue('4')">4</button>
+                    <button onclick="addValue('5')">5</button>
+                    <button onclick="addValue('6')">6</button>
+                    <button onclick="addValue('*')">*</button>
+
+                    <button onclick="addValue('1')">1</button>
+                    <button onclick="addValue('2')">2</button>
+                    <button onclick="addValue('3')">3</button>
+                    <button onclick="addValue('-')">-</button>
+
+                    <button onclick="addValue('0')">0</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="addValue('+')">+</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- PLANNER -->
+        <!-- ========================= -->
+
+        <section id="planner" class="content">
+
+            <h2>Study Planner</h2>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter Task">
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+            <ul id="taskList">
+
+            </ul>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- WEATHER -->
+        <!-- ========================= -->
+
+        <section id="weather" class="content">
+
+            <h2>Weather</h2>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter City">
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+
+            <div id="weatherResult">
+
+            </div>
+
+        </section>
+                <!-- ========================= -->
+        <!-- SETTINGS -->
+        <!-- ========================= -->
+
+        <section id="settings" class="content">
+
+            <h2>Settings</h2>
+
+            <div class="settings-container">
+
+                <div class="setting-card">
+
+                    <h3>Theme</h3>
+
+                    <button onclick="toggleTheme()">
+                        Toggle Dark / Light Mode
+                    </button>
+
+                </div>
+
+                <div class="setting-card">
+
+                    <h3>Developer Information</h3>
+
+                    <p>
+                        This project is developed using
+                        HTML5,
+                        CSS3,
+                        and JavaScript.
+                    </p>
+
+                </div>
+
+                <div class="setting-card">
+
+                    <h3>Version</h3>
+
+                    <p>DevDesk OS v1.0</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOOTER -->
+        <!-- ========================= -->
+
+        <footer>
+
+            <p>
+                © 2026 DevDesk OS |
+                Designed & Developed by Your Name
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
