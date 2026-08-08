@@ -1,12 +1,3 @@
-/* ===================================
-   DevDesk OS
-   SCRIPT.JS - PART 1
-===================================*/
-
-// ================================
-// SHOW SECTIONS
-// ================================
-
 function showSection(id){
 
     let sections = document.querySelectorAll(".content");
@@ -22,9 +13,6 @@ function showSection(id){
 }
 
 
-// ================================
-// LIVE CLOCK
-// ================================
 
 function updateClock(){
 
@@ -46,9 +34,6 @@ setInterval(updateClock,1000);
 updateClock();
 
 
-// ================================
-// DARK MODE
-// ================================
 
 let dark = false;
 
@@ -77,9 +62,6 @@ function toggleTheme(){
 }
 
 
-// ================================
-// SAVE NOTES
-// ================================
 
 window.onload=function(){
 
@@ -102,15 +84,7 @@ function saveNote(){
     alert("Note Saved Successfully!");
 
 }
-/* ===================================
-   DevDesk OS
-   SCRIPT.JS - PART 2
-===================================*/
 
-
-// ================================
-// CALCULATOR
-// ================================
 
 function addValue(value){
 
@@ -142,9 +116,6 @@ function calculate(){
 }
 
 
-// ================================
-// STUDY PLANNER
-// ================================
 
 let taskList = document.getElementById("taskList");
 
@@ -185,9 +156,7 @@ function deleteTask(button){
 }
 
 
-// ================================
-// LOCAL STORAGE TASKS
-// ================================
+
 
 function saveTasks(){
 
@@ -210,10 +179,6 @@ function loadTasks(){
 loadTasks();
 
 
-// ================================
-// ENTER KEY SUPPORT
-// ================================
-
 document.getElementById("taskInput").addEventListener("keypress",function(e){
 
     if(e.key==="Enter"){
@@ -223,15 +188,7 @@ document.getElementById("taskInput").addEventListener("keypress",function(e){
     }
 
 });
-/* ===================================
-   DevDesk OS
-   SCRIPT.JS - PART 3
-===================================*/
 
-
-// ================================
-// WEATHER API
-// ================================
 
 const apiKey = "YOUR_OPENWEATHER_API_KEY";
 
@@ -291,10 +248,6 @@ async function getWeather(){
 }
 
 
-// ================================
-// SMALL CARD ANIMATION
-// ================================
-
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card=>{
@@ -314,9 +267,6 @@ cards.forEach(card=>{
 });
 
 
-// ================================
-// BUTTON RIPPLE EFFECT
-// ================================
 
 document.querySelectorAll("button").forEach(button=>{
 
@@ -335,9 +285,6 @@ document.querySelectorAll("button").forEach(button=>{
 });
 
 
-// ================================
-// PAGE LOADED
-// ================================
 
 console.log("DevDesk OS Loaded Successfully");
 
